@@ -1,0 +1,141 @@
+.a{
+    display:flex;
+    flex-direction: row;
+    width:1300px; height:200px;
+    background-color:  rgb(255, 184, 222) ;
+    border-color: rgb(255, 174, 24);
+    margin-bottom: 30px;
+    margin-left:100px;
+    border-radius: 20px 20px 20px 20px;
+
+
+}
+
+#top_header h1,p{
+    margin-left: 10px;
+}
+#post img{
+    float:left;
+    margin-right:20px;
+}
+#post h3{
+    margin-left:40px;
+}
+
+#navi{
+
+    display:flex;
+    flex-direction: row;
+    position:absolute;
+    left:50%;
+    
+    
+}
+#navi li a{
+    color:white;
+
+}
+
+#title{
+    left:20px;
+}
+
+#navi li a:hover {
+    background-color: grey;
+
+}
+#navi li:hover #sub{
+    display: block;
+}
+#navi li a{
+    text-decoration: none;
+    display:inline-block;
+    width: 120px; height:40px;
+    text-align: center;
+
+}
+ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+#sub{
+    font-size: 13px;
+    display:none;
+    width: 120px; height:40px;
+    background-color:  black ;
+    
+}
+
+#login{
+    display:flex;
+    flex-direction: column;
+    width: 250px; height: 810px;
+    background-color:  rgb(255, 184, 222) ;
+    margin-left: 100px;
+    margin-right:20px;
+    text-align: center;
+    border-radius: 20px 20px 20px 20px;
+
+    
+    
+}
+
+.card{
+    display:inline-block;
+    width:850px; height:200;
+    border:1px solid;
+    border-color:black;
+    margin:10px;
+    padding:10px;
+    font-weight:bold;
+    border-radius: 20px 20px 20px 20px;
+
+
+}
+.card img{
+    width:170px;
+    height:180px;
+}
+.adv{
+    display:inline-block;
+    width: 180px; height:200px;
+    border:3px solid;
+    border-color: rgb(234, 255, 205);
+    margin:10px;
+    padding:10px;
+    background-color: rgb(234, 255, 205);
+    border-radius: 20px 20px 20px 20px;
+}
+
+.b{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.ft{
+
+    width:1300px; height:40px;
+    background-color:  rgb(255, 184, 222) ;
+    margin-top:10px;
+    margin-left:100px;
+    border-radius: 20px 20px 20px 20px;
+
+
+
+}
+#foot ul {
+    display:flex;
+    flex-direction: row;
+    vertical-align: middle;    
+}
+#foot ul a{
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+    margin:110px;
+}
+#foot ul li{
+    margin-top: 10px;
+}
