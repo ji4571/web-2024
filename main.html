@@ -1,119 +1,171 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta charset="utf-8">
-	<title>메인 페이지</title> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overwatch 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* 배경색 설정 */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            height: 900px;
+            margin: 0 auto;
+            border: 1px solid white;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            position: relative;
+        }
+        .header img {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .menu {
+            display: flex;
+            font-weight: bold;
+            font-size: larger;
+            justify-content: space-around;
+            border-bottom: 4px solid #eb9101;
+            padding: 10px 0;
+        }
+        .menu div {
+            position: relative;
+        }
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            font-size: medium;
+            border: 2px solid black;
+            text-align: center;
+            width: 110px;
+            top: 8px;
+            text-decoration: none;
+        }
+        .menu div:hover .submenu {
+            display: block;
+        }
+        .submenu p:hover {
+            color: #eb9101;
+        }
+        .content {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .content div {
+            width: 45%;
+            height: 500px;
+            border: 1px solid #000;
+            padding: 10px;
+        }
+        .content .content1 {
+            flex: 7;
+            border: 1px solid #fff;
+            padding: 10px;
+        }
+        .content .content2 {
+            flex: 3;
+            text-align: center;
+            border: 1px solid#fff;
+            padding: 10px;
+        }
+        .menu a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 40px;
+            border-top: 4px solid #eb9101;
+            padding-top: 10px;
+            text-align: center;
+        }
+        .footer a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
 </head>
-<link rel="stylesheet" href="main.css">
 <body>
-	<div class="a">
-	<header id="top_header">
-        <hgroup id="title">
-            <h1> a </h1>
-            <p>20010709</p>
-        </hgroup>
-        <nav >
-			<ul id="navi">
-				<li><a href="#">Under the skin </a>
-					<ul>
-					<li id="sub"><a href="#">Scent of you</a></li>
-					<li id="sub"><a href="#">Buzz Love</a></li>
-					<li id="sub"><a href="#">Blind Love</a></li>
-					<li id="sub"><a href="#">The Final Countdown</a></li>
-				  	</ul>
-				</li>
-				<li><a href="#">Firework </a>
-					<ul>
-					<li id="sub"><a href="#">The moon is beautiful</a></li>
-					<li id="sub"><a href="#">Alien</a></li>
-				  	</ul>
-				</li>
-				<li><a href="#">W.O.L.F </a>
-					<ul>
-						<li id="sub"><a href="#">War cry</a></li>
-						<li id="sub"><a href="#">Road not taken</a></li>
-					</ul>
-				</li>
-				<li><a href="#">Dropkick</a>
-					<ul>
-						<li id="sub"><a href="#">Melody</a></li>
-						<li id="sub"><a href="#">Running with the pack</a></li>
-					</ul>
-				</li>
-				
-			</ul>
-        </nav>
-    </header>
-	</div>
-<div class="b">
-		<aside id="login">
-			<form>
-				<label for="user">아이디</label>
-				<input type="text" id="user" size="15"><br>
-				<label for="pass">비밀번호</label>
-				<input type="password" id="pass" size="15"><br>
-				<input type="submit" value="로그인">
-				<input type="button" value="회원가입">
-			</form>			
-		</aside>
-
-
-		<section id="post">
-			<article>
-                <div class="card">
-                    <header>
-                      <h3></h3>
-                    </header>
-                    <figure>
-                      <img src="">
-                    </figure>
-                    <p>.</p>
-                  </div> 
-			</article>
-			<article>
-                <div class="card">
-                    <header>
-                      <h3>비</h3>
-                    </header>
-                    <figure>
-                      <img src="">
-                    </figure>
-                    <p>.</p>
-                </div> 
-            </article>
-			<article>
-                <div class="card">
-                    <header>
-                      <h3></h3>
-                    </header>
-                    <figure>
-                      <img src="">
-                    </figure>
-                    <p>.</p>
-						
-                </div> 
-			</article>
-		</section>		
-		<aside id="ad">
-			<article class="adv">
-				<p>광고 위치</p>
-				<p><img src="" width="170"></p>
-				
-			</article>
-
-		
-	</div>		
-	<footer>
-		<div class="ft">
-		<nav id="foot">
-			<ul>
-				<li><a href="#">Hive</a></li>
-				<li><a href="#">I-land</a></li>
-				<li><a href="#">&audition</a></li>
-				<li ><a href="#">&team</a></li>
-			</ul>
-		</nav>	
-		</div>
-	</footer>
+    <div class="container">
+        <div class="header">
+            <a href="main.html">
+                <img src="logo.png" alt="아이콘" width="120" height="80">
+            </a>
+            <h1>OVERWATCH 2</h1>
+        </div>
+        <div class="menu">
+            <div>
+                게임 소개
+                <div class="submenu">
+                    <a href="개요.html">
+                        <p>개요</p>
+                    </a>
+                    <a href="트레일러.html">
+                        <p>트레일러</p>
+                    </a>
+                </div>
+            </div>
+            <div>
+                영웅
+                <div class="submenu">
+                    <a href="영웅설명.html">
+                        <p>영웅 설명</p>
+                    </a>  
+                </div>
+            </div>
+            <div>
+                온라인 스토어
+                <div class="submenu">
+                    <a href="게임내구매.html">
+                        <p>게임내구매</p>
+                    </a>                    
+                    <a href="굿즈.html">
+                        <p>굿즈</p>
+                    </a>
+                </div>
+            </div>
+            <div>
+                E-SPORTS
+                <div class="submenu">
+                    <a href="overwatchleague.html">
+                        <p>OVERWATCH LEAGUE</p>
+                    </a>                    
+                    <a href="owcs.html">
+                        <p>OWCS</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content1">
+                <h4>우리의 비전</h4>
+                <h2>모두가 더 즐겁고 행복하도록</h2>
+                <h4>우리의 사명</h4>
+                <h2>모두 함께 공유할 수 있는 전설적인 세계와 장르를 정의하는 게임을 만드는 일</h2>
+                <p>우리는 게임을 통한 가능성과 플레이어의 게임 경험 방식을 새롭게 정의하고자 합니다. 우리는 플레이어가 기대하는 속도에 맞춰 게임을 제공하는 동시에 게임에 대한 애정과 관심의 균형을 맞추는 일을 목표로 합니다. 우리는 독보적인 창의력과 스토리텔링을 통해 플랫폼, 국경, 배경, 세대를 아우르며 사랑받는 몰입형 세계와 상징적인 캐릭터를 제작하며, 이는 게임 개발의 예술성과 직원들의 열정을 이끌어낼 수 있는 업무 환경을 구축했기에 가능한 일입니다.</p>
+                <br><br>
+                <img src="blizzard.png" alt="아이콘" width="300" height="100">          
+            </div>  
+            <div class="content2">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-fBV9xNKByw?si=MJ1pTIV3HVwAyTlZ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="footer">
+            <p>2024 <a href="지도.html">Blizzard Entertainments</a>; 2311328 김지유</p>
+        </div>
+    </div>
 </body>
 </html>
