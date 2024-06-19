@@ -99,6 +99,8 @@
             position: absolute;
             right: 20px;
             top: 20px;
+            display: flex;
+            align-items: flex-start; /* 세로 정렬을 위해 추가 */
         }
         .login-container form {
             display: flex;
@@ -106,6 +108,12 @@
         }
         .login-container input {
             margin-bottom: 10px;
+        }
+        .login-container button {
+            margin-bottom: 10px;
+        }
+        .login-container button:last-child {
+            margin-bottom: 0; /* 마지막 버튼의 마진 제거 */
         }
     </style>
 </head>
@@ -122,6 +130,7 @@
                     <input type="password" id="password" placeholder="Password" required>
                     <button type="submit">Login</button>
                 </form>
+                <button onclick="window.location.href='test.html'">회원 확인</button> <!-- 수정된 위치의 회원 확인 버튼 -->
                 <button id="logout-button" style="display: none;">Logout</button>
             </div>
         </div>
