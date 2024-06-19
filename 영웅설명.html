@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overwatch 2</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .icon {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+        .content-box {
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .circle-button {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .circle-button img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .description-box {
+            margin-top: 10px;
+        }
+        .description-text {
+            margin-top: 20px;
+            font-size: 18px; /* 설명 텍스트 폰트 크기 */
+        }
+        .image-box {
+            width: 100%;
+            height: 200px;
+            background-color: #f8f9fa;
+            background-size: contain; /* 배경 이미지를 박스에 맞추기 */
+            background-repeat: no-repeat; /* 배경 이미지 반복 없음 */
+            background-position: center; /* 배경 이미지를 가운데 정렬 */
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sidebar {
+            margin-top: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            border-bottom: 4px solid #eb9101;
+        }
+        .header img {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+        .header h1 {
+            margin: 50px;
+        }
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+        .d-flex {
+            display: flex;
+        }
+    </style>
+    <script>
+        function showDetails(role) {
+            const descriptions = {
+                "탱커": "돌격 영웅은 피해를 흡수하고 뭉쳐 있는 적들이나 비좁은 요충지와 같이 요새화된 거점을 무너뜨립니다. 돌격 영웅은 아군의 선두 자리에 서게 됩니다!",
+                "딜러": "공격 영웅은 다양한 장비와 능력, 플레이 스타일로 적을 찾아내 교전을 벌이고 처치합니다. 두려움이 없지만 동시에 처치당하기도 쉬운 공격 영웅이 생존하려면 지원이 필요합니다.",
+                "힐러": "지원 영웅은 치유, 보호막, 공격력 증가, 적 무력화 등의 효과로 아군을 보조합니다. 지원 영웅은 팀 생존의 중추 역할을 합니다."
+            };
+            const images = {
+                "탱커": "orisa.png",
+                "딜러": "hanzo.png",
+                "힐러": "mercy.png"
+            };
+            document.getElementById("description-text").innerText = descriptions[role];
+            document.getElementById("image-box").style.backgroundImage = `url(${images[role]})`;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="header">
+                    <a href="main.html">
+                        <img src="logo.png" alt="아이콘" width="120" height="80">
+                    </a>
+                    <h1>OVERWATCH 2</h1>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="content-box">
+                    <h4>포지션 설명</h4>
+                    <div class="text-center video-container">
+                        <iframe src="https://www.youtube.com/embed/vucw3h5qYtI?si=r1fV7XfpK0BFpjwu" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="content-box description-box">
+                    <div class="d-flex justify-content-around">
+                        <div class="circle-button" onclick="showDetails('탱커')">
+                            <img src="tank.png" alt="탱커">
+                        </div>
+                        <div class="circle-button" onclick="showDetails('딜러')">
+                            <img src="dealer.png" alt="딜러">
+                        </div>
+                        <div class="circle-button" onclick="showDetails('힐러')">
+                            <img src="healer.png" alt="힐러">
+                        </div>
+                    </div>
+                    <div id="description-text" class="description-text">
+                    </div>
+                    <div id="image-box" class="image-box">
+                        <!-- 사진 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

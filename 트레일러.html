@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overwatch 2 - 스토리</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 50px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            border-bottom: 4px solid #eb9101;
+        }
+        .header img {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+        .header h1 {
+            margin: 50px;
+        }
+        .story-description {
+            height: 1200px;
+            text-align: left;
+            margin-bottom: 10px;
+            padding: 50px;
+            border: 1px solid #000;
+            background-image: url('Overwatch-2.png'); /* 배경 이미지 경로 설정 */
+            background-size: cover; /* 이미지 크기 맞춤 */
+            background-position: center; /* 이미지 위치 조정 */
+            background-color: rgba(0, 0, 0, 0.5); /* 반투명 검은색 배경 */
+            color: white; /* 텍스트 색상 변경 */
+            overflow-y: scroll; /* 스크롤 추가 */
+            position: relative;
+        }
+        .story-description p {
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+        .story-description::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* 반투명 검은색 배경 */
+            z-index: 0;
+        }
+        .videos {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        .video {
+            width: 48%;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #ccc;
+        }
+        .video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .sidebar {
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            width: 200px;
+            background: #f5f5f5;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .sidebar h3 {
+            margin-top: 0;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="main.html">
+                <img src="logo.png" alt="아이콘" width="120" height="80">
+            </a>
+            <h1>OVERWATCH 2</h1>
+        </div>
+        <div class="story-description">
+            <p>옴닉 사태의 발발로 인간과 옴닉의 갈등이 깊어지며, UN에 의해 창립된 오버워치라는 조직이 전쟁에 개입, 옴닉 사태를 종결시킨다.</p>
+            <p>이후 오버워치는 세계평화유지군으로서 활동하며 전성기를 펼쳐나간다. 그러던 중 오버워치 산하의 비밀조직 블랙워치가 리알토에서 탈론 소속의 사업가 안토니오 바르탈로티를 데려와 심문하려던 작전에서 사령관 레예스가 독단적으로 안토니오를 사살해버렸고, 그 결과 공식적으로 드러낼 수 없는 임무를 맡던 블랙워치라는 조직의 존재가 외부에 드러나게 된다.</p>
+            <p>이로 인해 오버워치에 대한 여론이 서서히 나빠지게 되고, 그러던 와중에도 런던 널 섹터 침공과 쿠바에서 탈론의 핵심 인물인 막시밀리앙을 체포하는 등의 공적을 세우지만, 블랙워치가 납치, 고문, 암살 등의 위법 행위를 저지른 것부터 시작하여 부정부패와 부실경영, 무기확산, 인권 피해 등의 충격적인 혐의점들이 세간에 드러나게 되고 여론이 바닥을 치닫는다. 결국 오버워치 해체를 요구하는 국가가 많아지며, UN 특별 위원회가 발족되어 오버워치는 오랜 감사에 들어간다.</p>
+            <p>한참 UN 감사가 이루어지던 중 레예스가 오버워치 스위스 본부에서 총격전과 폭발을 일으키고, 여기서 레예스와 모리슨이 사망한다. 하지만 레예스의 행적으로 인해 오버워치 요원들은 의심의 대상이 되어버렸고, 감사와 수사의 결과 오버워치는 해체되어버리기에 다다른다.</p>
+            <p>거기다 비비안 체이스의 결정적인 증언으로 인해 페트라스 법이라는 법안이 제정되고 말았으며, 그 후 오버워치 활동이 페트라스 법에 의해 금지되며, 오버워치라는 집단이 해산. 전직 오버워치 요원 대부분은 은퇴하거나 용병이 되고 만다.</p>
+            <p>그렇게 세월이 흐르고 오버워치라는 조직이 세상에서 사라진 후 몇년. 탈론 요원 리퍼가 전직 오버워치 요원들을 암살하기 시작하며, 지브롤터 기지에 숨어있던 윈스턴을 제거하고 전 오버워치 요원에 대한 데이터를 추출해가려 하나 이를 윈스턴이 저지한다.</p>
+            <p>윈스턴은 이전부터 세계 곳곳에서 발발하는 여러 문제에 대해 방관하는 것에 지쳐있었고, 탈론 요원들을 쓰러뜨린 후 결국 요원들을 소집했다.</p>
+            <p>트레이서가 윈스턴에 합류하고 탈론이 둠피스트 건틀릿을 탈취하는 작전 등에 함께 투입한다. 겐지는 한조를 찾아가 자신의 정체를 밝히며 옳은 쪽에 서야한다며 자신에게 협력할 것을 밝힌다. 라인하르트와 브리기테는 부름에 답할 지 말지에 대해 실랑이를 벌이며, 라인하르트는 발데리히 스승에 대해 떠올리며 오버워치에 합류해야함을 밝힌다. 메이는 동면에서 깨어나 윈스턴의 소집을 알게 되어 오버워치를 만나러 가며, 캐서디는 데드락을 찾아가 화물을 탈취하고 에코를 깨워 오버워치의 윈스턴을 만날 것을 권유해준다.</p>
+            <p>그로부터 2년이 지난 시점. 트레이서와 윈스턴으로 이루어진 오버워치 팀에 메이가 합류했다. 때마침 널 섹터가 파리를 침공하게 되어 세명이서 침공을 막으러 간다. 하지만 세 명이서 널 섹터의 막대한 병력을 막는 것은 힘들었고 작전이 실패하려던 찰나에, 각자 모였던 겐지, 브리기테, 라인하르트, 메르시, 에코가 오버워치 팀에 합류하면서 힘을 합쳐 널 섹터를 몰아내는 데에 성공한다. 여기서 윈스턴이 오버워치가 다시 활동한다는 사실을 처음으로 선언한다.</p>
+            <p>한 편 에코를 깨웠던 캐서디는 이집트에서 아나를 만나면서 새로운 요원에 대한 정보를 듣는다. 아나 아마리의 딸 파리하 아마리를 설득해 오버워치에 합류시키고, 그 밖에 탈론에서 탈출하고 자신을 찾아온 바티스트, 아나의 정보를 토대로 러시아를 찾아가 만난 알렉산드라 자리야노바를 자신의 팀으로 영입시킨다.</p>
+            <p>그 때 대한민국 부산에서 널 섹터 침공이 이루어지고, 대한민국 육군 기동기갑부대는 귀신 이외의 적은 대항해본 적이 없어 수없이 쏟아지는 널 섹터 병력에 대응하지 못한다. 이 때 캐서디의 팀이 부산에 도착했고 MEKA 부대와 협력하여 널 섹터 병력을 막아내는 데에 성공한다. 캐서디는 D.Va에게 오버워치 합류를 권유하고 MEKA 부대에 널 섹터 병력에 대한 데이터를 건네준다. MEKA 부대의 명 대장은 본인 권한으로 D.Va를 널 섹터 병력에 대한 정보를 수집하는 목적으로 오버워치 팀에 파견보낸다. D.Va까지 합류한 캐서디는 윈스턴의 팀이 거점으로 삼은 지브롤터 기지로 향한다.</p>
+            <p>그 후 널 섹터는 브라질 리우 데 자네이루를 침공하기 시작하고, 브라질의 투사 루시우 코헤이아 도스 산토스는 널 섹터 병력을 막기 위해 노력하다 결국 오버워치에 구조요청을 보낸다. 구조 요청을 들은 윈스턴의 오버워치 팀은 리우의 널 섹터 병력을 정리하고, 병력이 나오는 주 함선을 파괴하여 사태를 정리한다. 루시우는 오버워치와 협력하고 싶다는 의사를 표하며, 오버워치 팀의 지브롤터 기지로 합류한다. 지브롤터 기지에 도착했을 때 캐서디의 팀이 이미 기지에 도착해 있었고 윈스턴의 팀과 합류하게 된다.</p>
+            <p>제법 규모가 있음직해진 오버워치 팀은 사령관 역할을 맡아줄 요원을 찾기 위해 비비안 체이스가 위치한 캐나다로 떠난다. 캐나다는 이미 널 섹터가 침공하고 있던 중이었고, 비비안 체이스도 널 섹터의 침공으로부터 민간인을 지키기 위해 활동을 이어나가던 중이었다. 여기서 오버워치 팀이 비비안을 도와 캐나다 침공을 막아내며, 비비안은 오버워치는 실패했고 되살아나면 안된다며 널 섹터의 계획을 막아낼 때까지만 협력해주기로 약속한다.</p>
+            <p>브리기테, 라인하르트는 제압자에 의해 무력화된 옴닉을 되돌릴 방법을 찾기위해 이 분야의 대가인 토르비욘 린드홀름을 찾아가게 되고, 이 영향으로 널 섹터가 오버워치를 따라 스웨덴을 침공한다. 하지만 토르비욘의 기술력을 통해 널 섹터 병력 및 타이탄을 물리친다. 한편 겐지는 널 섹터의 목적이 무엇인지 알아보기 위해 스승인 젠야타를 찾아가고, 탈론 요원들도 때마침 젠야타를 찾아간다.</p>
+            <p>이후 스토리는 아직 공개되지 않았다.</p>
+        </div>
+        <div class="videos">
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/2-2wlumJqhs?si=gfFKqnycw5VsX0dw" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/m_o0MpnD7oQ?si=WTAw4IK6gbOaATcl" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

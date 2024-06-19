@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overwatch 2 - 구매 상품</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .content-box {
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .btn-custom {
+            width: 100px; /* 버튼 너비 조정 */
+            height: 100px; /* 버튼 높이 조정 */
+            border-radius: 50%;
+            font-size: 20px; /* 폰트 크기 조정 */
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none; /* 하이퍼링크 밑줄 제거 */
+        }
+        .description-box {
+            margin-top: 10px;
+        }
+        .description-text {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .image-box {
+            width: 100%;
+            height: 300px;
+            background-color: #f8f9fa;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer; /* 이미지 박스에 커서 포인터 추가 */
+            position: relative;
+            transition: background-color 0.3s ease; /* 배경색 전환 효과 추가 */
+        }
+        .image-box:hover {
+            background-color: rgba(0, 0, 0, 0.5); /* 어두운 배경색 추가 */
+        }
+        .image-box:hover .hover-text {
+            opacity: 1; /* 텍스트 보이기 */
+        }
+        .hover-text {
+            position: absolute;
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+            opacity: 0; /* 텍스트 숨기기 */
+            transition: opacity 0.3s ease; /* 텍스트 전환 효과 추가 */
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            border-bottom: 4px solid #eb9101;
+        }
+        .header img {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+        .header h1 {
+            margin: 50px;
+        }
+        .d-flex {
+            display: flex;
+        }
+        .btn-battlepass {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        .btn-ultimatebattlepass {
+            background-color: #28a745;
+            color: white;
+            border-color: #28a745;
+        }
+    </style>
+    <script>
+        function showDetails(product) {
+            const descriptions = {
+                "배틀패스": "배틀패스는 다양한 보상을 제공하며, 새로운 영웅 스킨, 음성 대사, 이모티콘 등을 포함합니다. 시즌을 진행하면서 보상을 잠금 해제하세요!",
+                "궁극의 배틀패스": "궁극의 배틀패스는 배틀패스의 모든 혜택과 함께 추가로 전설 스킨, 프리미엄 통화, 독점 아이콘 등을 제공합니다. 최대의 가치를 누리세요!"
+            };
+            const images = {
+                "배틀패스": "배틀패스.png",
+                "궁극의 배틀패스": "궁극.png"
+            };
+            document.getElementById("description-text").innerText = descriptions[product];
+            document.getElementById("image-box").style.backgroundImage = `url(${images[product]})`;
+            document.getElementById("image-box").setAttribute("onclick", `window.location.href='구매페이지.html'`);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="header">
+                    <a href="main.html">
+                        <img src="logo.png" alt="아이콘" width="120" height="80">
+                    </a>
+                    <h1>OVERWATCH 2</h1>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="content-box">
+                    <h4>구매 상품</h4>
+                    <div class="d-flex justify-content-around">
+                        <button class="btn btn-custom btn-battlepass" onclick="showDetails('배틀패스')">
+                            배틀패스
+                        </button>
+                        <button class="btn btn-custom btn-ultimatebattlepass" onclick="showDetails('궁극의 배틀패스')">
+                            궁극의 배틀패스
+                        </button>
+                    </div>
+                    <div id="description-text" class="description-text">
+                    </div>
+                    <div id="image-box" class="image-box">
+                        <div class="hover-text">구매 페이지로 이동</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

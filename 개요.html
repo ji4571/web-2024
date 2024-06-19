@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overwatch 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('background-video.mp4') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            border: 1px solid white;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            position: relative;
+            border-bottom: 4px solid #eb9101;
+        }
+        .header img {
+            position: static;
+            margin-right: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .video {
+            position: relative;
+            height: 300px;
+            border: 1px solid #000;
+            margin-bottom: 20px;
+        }
+        .video iframe {
+            width: 100%;
+            height: 100%;
+        }
+        .video-controls {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            z-index: 2;
+        }
+        .description {
+            margin-bottom: 20px;
+        }
+        .description h2 {
+            cursor: pointer;
+            margin: 0;
+        }
+        .description-content {
+            display: none;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .description-content p {
+            margin: 10px 0;
+        }
+        .description-content img {
+            display: block;
+            max-width: 200px;
+            margin: 10px auto;
+        }
+        .play-free {
+            display: block;
+            width: 200px;
+            margin: 0 auto 20px;
+            padding: 10px;
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .social-links img {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="main.html">
+                <img src="logo.png" alt="아이콘" width="120" height="80">
+            </a>
+            <h1>OVERWATCH 2</h1>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/oRCMGpL_5-U?si=Ru5fXaci9Yzw9f5p" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="description">
+            <h2 onclick="toggleContent('game-description')">게임설명</h2>
+            <div id="game-description" class="description-content">
+                <h2>영웅 선택</h2>
+                <p>오버워치 2에서는 모든 경기 팀과 협력하여 목표를 완료해야 합니다. 영웅의 기술과 능력을 활용하여 승리의 길로 나아가세요!</p>
+                <h3>강력한 무기</h3>
+                <p>근접 무기나 샷건부터 원거리에서 타격할 수 있는 장거리 저격 소총에 이르기까지, 영웅마다 각자의 전투 방식에 어울리는 자신만의 무기를 사용합니다.</p>
+                <h3>팀을 이루는 세 가지 역할</h3>
+                <p>돌격 영웅은 전장에서 아군의 공간을 확보하고, 공격 영웅은 적을 처치하며, 지원 영웅은 팀원을 치유하거나 영웅의 능력을 끌어올려 줍니다. 어떤 역할이 마음에 드시나요?</p>
+                <h3>궁극기로 게임의 판도를 뒤집으세요</h3>
+                <p>전장을 관통하며 노도하는 용, 보이는 모든 것을 파괴하는 자폭 메카, 적을 멈추게 하는 EMP 폭발 등 다양한 기술을 사용하세요.</p>
+                <img src="tracer.png" alt="사진">
+            </div>
+        </div>
+        <div class="description">
+            <h2 onclick="toggleContent('game-features')">게임</h2>
+            <div id="game-features" class="description-content">
+                <p>오버워치 2는 무료 플레이 가능한 슈팅 게임으로, 30명이 넘는 개성 있는 영웅과 전세를 뒤집는 능력을 만나볼 수 있습니다. 영웅을 선택하고 친구들과 팀을 이뤄 색다른 전장과 모드에서 궁극의 팀 기반 슈팅 게임을 플레이하세요.</p>
+                <img src="rein.png" alt="사진">
+            </div>
+        </div>
+        <a href="https://download.battle.net/ko-kr?product=ow&blzcmp=ow_gamesite" class="play-free">무료 플레이</a>
+        <div class="social-links">
+            <a href="https://www.facebook.com/OverwatchKR/" target="_blank"><img src="facebook.png" alt="사진"></a>
+            <a href="https://www.youtube.com/channel/UC-2wa6jvprl7hfCpvw0ULzg" target="_blank"><img src="youtube.png" alt="사진"></a>
+            <a href="https://twitter.com/overwatchkr" target="_blank"><img src="x.png" alt="사진"></a>
+        </div>
+    </div>
+</body>
+</html>
